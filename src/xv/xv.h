@@ -123,7 +123,7 @@
 
 /* not everyone has the strerror() function, or so I'm told */
 #ifndef VMS
-#  define ERRSTR(x) sys_errlist[x]
+#  define ERRSTR(x) strerror(x)
 #else
 #  define ERRSTR(x) strerror(x, vaxc$errno)
 #endif
